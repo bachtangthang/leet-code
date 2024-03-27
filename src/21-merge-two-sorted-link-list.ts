@@ -1,4 +1,4 @@
-import { ListNode } from './data-structure/linked-list';
+import { ListNode, buildList } from './data-structure/linked-list';
 
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   if (list1 === null) return list2;
@@ -36,30 +36,11 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
   return null;
 };
 
-const buildList = (arr: number[]): ListNode => {
-  let list = new ListNode;
-  if (arr.length === 1)
-    return new ListNode(arr[0])
-  for( let i:number = 0; i < arr.length; i++) {
-    if(i === arr.length -1)
-      list = new ListNode(arr[i], null);
-    list.next = buildList(arr.slice(i + 1));
-    list.val = arr[i];
-    return list
-  }
-  return list
-}
 
-
-const printList = (list: ListNode | null) => {
-  if(list === null) return;
-  console.log(list.val);
-  if(list.next === null) return;
-  printList(list.next);
-}
-
-const list = mergeTwoLists(
+// run
+const list = new ListNode()
+const mergeList = mergeTwoLists(
   buildList([1,2,4]),
   buildList([1,3,4])
 )
-printList(list);
+list.printList(mergeList);
