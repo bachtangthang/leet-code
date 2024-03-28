@@ -1,4 +1,4 @@
-import { ListNode, buildList } from './data-structure/linked-list';
+import { ListNode, buildList } from "./data-structure/linked-list";
 
 function deleteDuplicates(head: ListNode | null): ListNode | null {
   if (head === null) return head;
@@ -12,8 +12,7 @@ function deleteDuplicates(head: ListNode | null): ListNode | null {
     return head;
   }
   return head;
-};
-
+}
 
 const list = new ListNode();
-list.printList(deleteDuplicates(buildList([1,1,1])));
+list.printList(deleteDuplicates(buildList([1, 1, 1])));

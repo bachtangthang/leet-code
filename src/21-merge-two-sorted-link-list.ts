@@ -40,7 +40,7 @@ function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode
 // run
 const list = new ListNode()
 const mergeList = mergeTwoLists(
-  buildList([1,2,4]),
-  buildList([1,3,4])
+  buildList([1, 2, 4]),
+  buildList([1, 3, 4])
 )
 list.printList(mergeList);
