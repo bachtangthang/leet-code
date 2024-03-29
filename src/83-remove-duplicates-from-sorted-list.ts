@@ -1,5 +1,7 @@
 import { ListNode, buildList } from "./data-structure/linked-list";
 
+// recursion, simply
+// if head.val = head.next.val -> detach that node and recursion
 function deleteDuplicates(head: ListNode | null): ListNode | null {
   if (head === null) return head;
   if (head.next !== null) {

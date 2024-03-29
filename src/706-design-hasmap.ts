@@ -1,5 +1,6 @@
 import { ListNode, buildList } from './data-structure/linked-list';
 
+// arr[key] = value; simpliest solution
 class MyHashMap {
   arr: (number)[]
   constructor() {

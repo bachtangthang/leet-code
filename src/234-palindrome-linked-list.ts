@@ -4,6 +4,7 @@ import { ListNode, buildList } from './data-structure/linked-list';
 // 1 -> 2 -> 2 -> 1 : true
 // 1 -> 2 -> 1: true
 // 1 -> 2: false
+// add to an array and loop again to check
 function isPalindrome(head: ListNode | null): boolean {
   const arr = [];
   while (head) {

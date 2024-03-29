@@ -1,5 +1,7 @@
 import { ListNode, buildList } from './data-structure/linked-list';
 
+// add a double jump cursor
+// false if single jump cursor meet double jump cursor (cause if linked list is not cycle, they wont meet each other)
 function hasCycle(head: ListNode | null): boolean {
   let doubleTra = head;
   if (head === null || head.next === null) return false;

@@ -1,5 +1,10 @@
 import { ListNode, buildList } from './data-structure/linked-list';
 
+// recursion, simply: merge 2 sorted linked list = 
+// case 1: each of them is null => return the not null list
+// case 2: both of list next cursor is null => sort and return new list
+// case 3: one of list next cursor is null => recursion
+// case 4: none of list next cursor is null => recursion
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   if (list1 === null) return list2;
   if (list2 === null) return list1;
